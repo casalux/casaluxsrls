@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Nostri Lavori — Casalux S.r.l.s. | Portfolio Cantieri in Veneto</title>
+<meta name="description" content="Il portfolio di Casalux S.r.l.s.: ristrutturazioni, cappotti termici, tetti, interni ed esterni realizzati a Roncade e in tutto il Veneto.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#082a44">
+<link rel="canonical" href="https://www.casalux.it/lavori.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="I Nostri Lavori — Casalux S.r.l.s.">
+<meta property="og:description" content="Una selezione dei nostri cantieri: ristrutturazioni, cappotti, tetti, interni ed esterni.">
+<meta property="og:image" content="https://www.casalux.it/img/og-image.jpg">
+<meta property="og:url" content="https://www.casalux.it/lavori.html">
+
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Casalux — Home"><img class="logo-chiaro" src="img/logo-bianco.png" alt="Casalux — Manutenzioni e Costruzioni Generali"><img class="logo-scuro" src="img/logo.png" alt="Casalux — Manutenzioni e Costruzioni Generali"></a>
+    <nav class="nav" aria-label="Navigazione principale">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+        <li><a href="servizi.html">Servizi</a></li>
+        <li><a href="lavori.html" class="active">Lavori</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+      <a href="contatti.html" class="btn btn-gold nav-cta">Richiedi Preventivo</a>
+      <button class="burger" id="burger" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner" style="--bg:url('https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=2000&q=80')">
+  <div class="container page-banner-inner">
+    <span class="eyebrow">Portfolio</span>
+    <h1>I nostri lavori</h1>
+    <nav class="breadcrumb"><a href="index.html">Home</a> / <span>Lavori</span></nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Progetti realizzati</span>
+      <h2>Cantieri che parlano per noi</h2>
+      <p>Filtra per categoria e clicca su una foto per ingrandirla.</p>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <button class="filter active" data-filter="all">Tutti</button>
+      <button class="filter" data-filter="ristrutturazioni">Ristrutturazioni</button>
+      <button class="filter" data-filter="cappotti">Cappotti</button>
+      <button class="filter" data-filter="tetti">Tetti</button>
+      <button class="filter" data-filter="interni">Interni</button>
+      <button class="filter" data-filter="esterni">Esterni</button>
+    </div>
+
+    <div class="portfolio" id="portfolio"></div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band-inner reveal">
+    <h2>Il prossimo lavoro potrebbe essere il tuo</h2>
+    <p>Mostraci cosa hai in mente: fissiamo un sopralluogo e ti prepariamo un preventivo gratuito.</p>
+    <a href="contatti.html" class="btn btn-gold">Richiedi Preventivo
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+</section>
+
+
+<<div aria-hidden="true" class="popup-overlay" id="whatsappPopup">
+  <div aria-labelledby="whatsappTitle" aria-modal="true" class="popup-box" role="dialog">
+    <div class="popup-header">
+      <h2 id="whatsappTitle">Scegli a chi scrivere</h2>
+      <button aria-label="Chiudi" class="popup-close" onclick="closeWhatsappPopup()">&times;</button>
+    </div>
+    <a class="call-option" href="https://wa.me/393515941230?text=Salve%2C%20vorrei%20un%20preventivo%20Casalux" rel="noopener" target="_blank">
+      <div>
+      <strong>
+       Erhan
+      </strong>
+      <p>
+       +39 351 594 1230
+      </p>
+     </div>
+      <span class="call-icon">💬</span>
+    </a>
+    <a class="call-option" href="https://wa.me/393358401227?text=Salve%2C%20vorrei%20un%20preventivo%20Casalux" rel="noopener" target="_blank">
+      <div>
+      <strong>
+       Gianni
+      </strong>
+      <p>
+       +39 335 840 1227
+      </p>
+     </div>
+      <span class="call-icon">💬</span>
+    </a>
+    <a class="call-option" href="https://wa.me/393385839702?text=Salve%2C%20vorrei%20un%20preventivo%20Casalux" rel="noopener" target="_blank">
+      <div>
+      <strong>
+       Fadil
+      </strong>
+      <p>
+       +39 338 583 9702
+      </p>
+     </div>
+      <span class="call-icon">💬</span>
+    </a>
+  </div>
+</div>
+
+<button class="wa-float" type="button" onclick="openWhatsappPopup()" aria-label="Scrivici su WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.05 24l1.7-6.2A11.9 11.9 0 1 1 12 24a11.9 11.9 0 0 1-5.7-1.5L.05 24zM6.6 20.1l.4.2a9.9 9.9 0 0 0 5 1.4 9.9 9.9 0 1 0-8.4-4.6l.3.4-1 3.7 3.7-1.1zM17.5 14.3c-.1-.2-.5-.4-1-.6s-1.5-.7-1.7-.8-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5a.5.5 0 0 0 0-.5L8 5.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.3 5.3 5.3 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4.1c.6.3 1.2.5 1.6.6a3.8 3.8 0 0 0 1.7.1c.5-.1 1.5-.6 1.8-1.2s.3-1.1.2-1.2z"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
