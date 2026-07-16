@@ -262,15 +262,16 @@ h1,h2,h3,h4{font-family:var(--ff-titolo);font-weight:400;line-height:1.18;color:
 .cta-band p{color:rgba(255,255,255,.82);font-size:1.08rem;margin-bottom:34px}
 
 /* ---------- Footer ---------- */
-.footer{background:var(--blu);color:rgba(255,255,255,.7);padding:80px 0 0}
+.footer{background:linear-gradient(180deg,var(--blu) 0%,#071e33 100%);color:rgba(255,255,255,.72);padding:84px 0 0;border-top:3px solid var(--oro)}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px;padding-bottom:54px}
 .footer .brand img{height:60px;margin-bottom:20px}
 .footer-about p{font-size:.92rem;line-height:1.7;max-width:300px}
-.footer h4{color:#fff;font-family:var(--ff-testo);font-weight:600;font-size:1rem;margin-bottom:22px}
+.footer h4{color:#fff;font-family:var(--ff-testo);font-weight:600;font-size:1rem;margin-bottom:22px;position:relative;padding-bottom:10px}
+.footer h4::after{content:'';position:absolute;left:0;bottom:0;width:32px;height:2px;background:var(--oro);border-radius:2px}
 .footer ul{list-style:none}
 .footer ul li{margin-bottom:12px}
-.footer ul a{font-size:.92rem;transition:color .3s var(--ease)}
-.footer ul a:hover{color:var(--oro)}
+.footer ul a{font-size:.92rem;transition:color .3s var(--ease),padding-left .3s var(--ease)}
+.footer ul a:hover{color:var(--oro);padding-left:5px}
 .footer-contact li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;margin-bottom:14px}
 .footer-contact svg{width:17px;height:17px;stroke:var(--oro);flex-shrink:0;margin-top:3px}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:26px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem}
@@ -346,3 +347,19 @@ h1,h2,h3,h4{font-family:var(--ff-titolo);font-weight:400;line-height:1.18;color:
 .call-option p{font-size:15px;margin:4px 0 0;opacity:.95;color:#fff}
 .call-icon{font-size:24px}
 button.wa-float{border:0;cursor:pointer}
+
+
+/* ── Footer centrato ── */
+.footer-center{padding:70px 0 60px;text-align:center;position:relative}
+.footer-center .brand img{height:64px;margin-bottom:26px}
+.footer-center .fc-name{color:#fff;font-weight:700;font-size:1.05rem;letter-spacing:.5px;margin-bottom:4px}
+.footer-center .fc-sub{font-style:italic;margin-bottom:14px}
+.footer-center .fc-line{font-size:.95rem;margin-bottom:6px}
+.footer-center .fc-line a:hover{color:var(--oro)}
+.footer-center .fc-links{margin:22px 0}
+.footer-center .fc-links a{color:var(--oro)}
+.footer-center .fc-links a:hover{text-decoration:underline}
+.footer-center .fc-copy{font-size:.85rem;opacity:.75}
+.scroll-top{position:absolute;right:34px;bottom:34px;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center;transition:background .3s var(--ease)}
+.scroll-top:hover{background:var(--oro);color:var(--blu)}
+.scroll-top svg{width:22px;height:22px}
