@@ -163,7 +163,7 @@
       var data={
         Nome:form.nome.value, Cognome:form.cognome.value,
         Email:form.email.value, Telefono:form.tel.value, Messaggio:form.msg.value,
-        _subject:'Nuova richiesta dal sito Casalux', _template:'table', _captcha:'false', _url:window.location.href
+        access_key:'72d60b09-3526-463b-820e-444ecc351c16', subject:'Nuova richiesta dal sito Casalux'
       };
 
       // Nessun endpoint configurato -> mostra solo conferma (modalità demo)
