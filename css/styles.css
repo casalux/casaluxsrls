@@ -351,6 +351,7 @@ button.wa-float{border:0;cursor:pointer}
 
 /* ── Footer centrato ── */
 .footer-center{padding:70px 0 60px;text-align:center;position:relative}
+.footer-center .brand{display:flex;justify-content:center}
 .footer-center .brand img{height:64px;margin-bottom:26px}
 .footer-center .fc-name{color:#fff;font-weight:700;font-size:1.05rem;letter-spacing:.5px;margin-bottom:4px}
 .footer-center .fc-sub{font-style:italic;margin-bottom:14px}
