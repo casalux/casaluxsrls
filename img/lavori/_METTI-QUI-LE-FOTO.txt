@@ -1,0 +1,15 @@
+METTI QUI LE FOTO DEI LAVORI
+============================
+
+In questa cartella vanno le foto dei lavori eseguiti.
+
+1) Copia qui le tue foto (consigliato: orizzontali, ~1200px, formato .jpg)
+   Esempio nome file:  ristrutturazione-villa.jpg
+
+2) Apri il file:  js/lavori-data.js
+   e aggiungi un blocco per ogni lavoro (le istruzioni sono dentro quel file).
+
+Esempio di percorso da scrivere in lavori-data.js:
+   img: "img/lavori/ristrutturazione-villa.jpg"
+
+Tutto qui: il lavoro comparirà da solo nella pagina "Lavori".
