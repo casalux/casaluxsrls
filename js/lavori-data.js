@@ -45,59 +45,12 @@
        desc:  "Breve descrizione dell'intervento."
      },
 
-   ----------------------------------------------------------------------------
-   Qui sotto trovi alcuni ESEMPI con foto provvisorie: sostituiscili man mano
-   con i tuoi lavori reali (cambia img, title, luogo, desc).
 ============================================================================ */
 
 window.LAVORI = [
 
-  {
-    img:   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    cat:   "ristrutturazioni",
-    title: "Villa Bifamiliare",
-    luogo: "Roncade (TV)",
-    desc:  "Ristrutturazione integrale con nuova distribuzione interna."
-  },
-
-  {
-    img:   "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
-    cat:   "cappotti",
-    title: "Cappotto Termico",
-    luogo: "Quarto d'Altino (VE)",
-    desc:  "Isolamento esterno con due classi energetiche in più."
-  },
-
-  {
-    img:   "https://images.unsplash.com/photo-1632154513343-43f9b0e8b9c4?auto=format&fit=crop&w=1200&q=80",
-    cat:   "tetti",
-    title: "Nuova Copertura",
-    luogo: "Casale sul Sile (TV)",
-    desc:  "Struttura in legno lamellare con manto coibentato."
-  },
-
-  {
-    img:   "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-    cat:   "interni",
-    title: "Open Space",
-    luogo: "Treviso (TV)",
-    desc:  "Demolizione tramezzi e ridisegno di un living luminoso."
-  },
-
-  {
-    img:   "https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1200&q=80",
-    cat:   "esterni",
-    title: "Facciata e Giardino",
-    luogo: "San Donà di Piave (VE)",
-    desc:  "Rifacimento facciata, pavimentazioni esterne e area verde."
-  },
-
-  {
-    img:   "https://images.unsplash.com/photo-1556909211-36987daf7b4d?auto=format&fit=crop&w=1200&q=80",
-    cat:   "ristrutturazioni",
-    title: "Appartamento di Pregio",
-    luogo: "Mogliano Veneto (TV)",
-    desc:  "Finiture di alto livello e impianti completamente rinnovati."
-  }
+  /* Aggiungi qui le foto dei tuoi lavori reali. Esempio:
+  "img/lavori/ristrutturazione-villa.jpg",
+  */
 
 ];
