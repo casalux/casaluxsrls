@@ -66,31 +66,33 @@
     $('#map').appendChild(f);
   });
 
-  /* Modulo contatti (FormSubmit, stesso indirizzo del sito precedente) */
+  /* Modulo contatti (Web3Forms) */
   const form = $('#contactForm');
   if (form) form.addEventListener('submit', e => {
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); return; }
     const err = $('#formError'), btn = form.querySelector('button[type=submit]'), old = btn.innerHTML;
     err.style.display = 'none'; btn.disabled = true; btn.textContent = 'Invio in corso…';
+    const nome = (form.nome.value + ' ' + form.cognome.value).trim();
     const data = {
-      Nome: form.nome.value, Cognome: form.cognome.value, Email: form.email.value,
-      Telefono: form.tel.value, Messaggio: form.msg.value,
-      _subject: 'Nuova richiesta dal sito Casalux', _template: 'table', _captcha: 'false', _honey: form._honey.value
+      access_key: form.dataset.key,
+      subject: 'Nuova richiesta dal sito Casalux · ' + nome,
+      from_name: 'Sito Casalux',
+      Nome: form.nome.value, Cognome: form.cognome.value,
+      email: form.email.value, Telefono: form.tel.value || '—',
+      Messaggio: form.msg.value,
+      botcheck: form.botcheck.checked
     };
     fetch(form.dataset.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
       .then(r => r.json())
       .then(res => {
-        if (res && (res.success === true || res.success === 'true')) { $('#formBody').style.display = 'none'; $('#formSuccess').classList.add('show'); return; }
-        const msg = String((res && res.message) || '');
-        console.warn('FormSubmit:', msg);
-        throw new Error(/activat/i.test(msg) ? 'attivazione' : 'invio');
+        if (res && res.success) { $('#formBody').style.display = 'none'; $('#formSuccess').classList.add('show'); return; }
+        console.warn('Web3Forms:', res && res.message);
+        throw new Error('invio');
       })
-      .catch(x => {
+      .catch(() => {
         btn.disabled = false; btn.innerHTML = old;
-        err.textContent = x && x.message === 'attivazione'
-          ? 'Il modulo è in fase di attivazione: il messaggio non è stato inviato. Nel frattempo chiamaci o scrivici su WhatsApp.'
-          : 'Invio non riuscito. Riprova tra poco oppure chiamaci ai numeri qui sopra.';
+        err.textContent = 'Invio non riuscito. Riprova tra poco oppure chiamaci ai numeri qui sopra.';
         err.style.display = 'block';
       });
   });
