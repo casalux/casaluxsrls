@@ -80,8 +80,19 @@
     };
     fetch(form.dataset.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) })
       .then(r => r.json())
-      .then(res => { if (res && (res.success === true || res.success === 'true')) { $('#formBody').style.display = 'none'; $('#formSuccess').classList.add('show'); } else throw 0; })
-      .catch(() => { btn.disabled = false; btn.innerHTML = old; err.style.display = 'block'; });
+      .then(res => {
+        if (res && (res.success === true || res.success === 'true')) { $('#formBody').style.display = 'none'; $('#formSuccess').classList.add('show'); return; }
+        const msg = String((res && res.message) || '');
+        console.warn('FormSubmit:', msg);
+        throw new Error(/activat/i.test(msg) ? 'attivazione' : 'invio');
+      })
+      .catch(x => {
+        btn.disabled = false; btn.innerHTML = old;
+        err.textContent = x && x.message === 'attivazione'
+          ? 'Il modulo è in fase di attivazione: il messaggio non è stato inviato. Nel frattempo chiamaci o scrivici su WhatsApp.'
+          : 'Invio non riuscito. Riprova tra poco oppure chiamaci ai numeri qui sopra.';
+        err.style.display = 'block';
+      });
   });
 
 
